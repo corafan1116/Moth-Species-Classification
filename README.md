@@ -40,9 +40,9 @@ The project uses a publicly available moth image dataset. A subset of 20 moth sp
 
 All images were resized to 224 × 224 pixels and normalised before model training. Data augmentation was applied online to the training data for the augmented CNN experiment.
 
-The original dataset is not included in this repository. Please refer to the dissertation for the dataset source and detailed dataset description.
+The original dataset and transformed test images are not included in this repository. The dataset source and detailed preprocessing procedure are described in the dissertation.
 
-A low-light test dataset generated for the robustness evaluation is included where applicable.
+The robustness transformation procedures used to generate the low-light, Gaussian blur and rotation test conditions are provided in `robustness_analysis.ipynb`.
 
 ## Experimental Setup
 
@@ -130,6 +130,7 @@ Moth-Species-Classification/
 │   ├── ResNet50.ipynb
 │   ├── EfficientNetB0.ipynb
 │   ├── ViT.ipynb
+│   ├── robustness_analysis.ipynb
 │   ├── CrossModel_ErrorAnalysis.ipynb
 │   └── LowLight_GradCAM.ipynb
 │
@@ -141,8 +142,5 @@ Moth-Species-Classification/
 │   ├── ViT_predictions.csv
 │   ├── CrossModel_ConfusionPairs.csv
 │   └── Species_Error_Frequency.csv
-│
-├── data/
-│   └── test_dark/
 │
 └── videos/

@@ -1,0 +1,26 @@
+# Local working files
+Error Analysis/
+
+# Dataset
+train/
+valid/
+test/
+test_dark/
+
+# Trained models
+*.keras
+*.h5
+*.hdf5
+
+# Generated figures
+Figure/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store

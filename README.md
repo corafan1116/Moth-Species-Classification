@@ -102,7 +102,7 @@ The dataset can be obtained from its original [Kaggle source](https://www.kaggle
 - Image format: RGB
 - Image resolution: 224 × 224 pixels
 - Data split: Training / Validation / Test
-- Dataset split: Original split provided by the dataset publisher
+- Original dataset split: Maintained throughout the experiments
 
 The original training, validation and testing split was maintained throughout the experiments to ensure consistency when comparing different models.
 

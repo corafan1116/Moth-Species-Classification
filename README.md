@@ -26,6 +26,7 @@ The project also investigates how model performance changes under controlled ima
 Moth-Species-Classification/
 │
 ├── README.md
+├── requirements.txt
 ├── .gitignore
 │
 ├── notebooks/
@@ -87,11 +88,13 @@ Install the required Python packages using:
 
 ## Dataset
 
-The project uses a subset of 20 moth species from the publicly available *Butterflies and Moths Species Classification Dataset* on Kaggle.
+The project uses a subset of 20 moth species from the publicly available *Butterfly & Moths Image Classification 100 species* on Kaggle.
 
 Only the moth categories were retained for this study; butterfly categories were excluded.
 
 The original dataset is **not included in this repository**.
+
+The dataset can be obtained from its original [Kaggle source](https://www.kaggle.com/datasets/gpiosenka/butterfly-images40-species).
 
 ### Dataset Configuration
 
@@ -248,7 +251,3 @@ To support reproducibility, the repository provides:
 - Prediction-level error-analysis files
 
 The original dataset and trained model files are not included in this repository.
-
-## License
-
-This repository is provided for academic and research purposes as part of an MSc Extended Research Project.

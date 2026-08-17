@@ -79,6 +79,12 @@ The experiments were developed using the following software environment:
 
 Model training was conducted using Google Colab with an NVIDIA T4 GPU, while Visual Studio Code was used for local development and debugging.
 
+## Installation
+
+Install the required Python packages using:
+
+`pip install -r requirements.txt`
+
 ## Dataset
 
 The project uses a subset of 20 moth species from the publicly available *Butterflies and Moths Species Classification Dataset* on Kaggle.

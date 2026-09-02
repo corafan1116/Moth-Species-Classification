@@ -16,7 +16,7 @@ In addition to classification performance, the project evaluates model robustnes
 
 The study focuses on the automated classification of 20 moth species selected from the publicly available *Butterflies and Moths Species Classification Dataset* on Kaggle.
 
-The experiments compare a CNN trained from scratch with transfer learning approaches using ResNet50, EfficientNet-B0 and Vision Transformer (ViT). The same dataset split and preprocessing procedure are used to provide a consistent basis for model comparison.
+The experiments compare a CNN trained from scratch with transfer learning approaches using ResNet50, EfficientNet-B0 and Vision Transformer (ViT). The same dataset split and image size were used to provide a consistent basis for model comparison, while model-specific preprocessing was applied within each model pipeline where required.
 
 The project also investigates how model performance changes under controlled image perturbations and analyses common misclassification patterns across models.
 
@@ -102,13 +102,12 @@ The dataset can be obtained from its original [Kaggle source](https://www.kaggle
 - Image format: RGB
 - Image resolution: 224 × 224 pixels
 - Data split: Training / Validation / Test
+- Test set: 100 images (5 images per species)
 - Original dataset split: Maintained throughout the experiments
-
-The original training, validation and testing split was maintained throughout the experiments to ensure consistency when comparing different models.
 
 ## Data Preprocessing
 
-All images were resized to 224 × 224 pixels and pixel values were normalised to the range `[0, 1]`.
+All images were resized to 224 × 224 pixels and loaded using TensorFlow's `image_dataset_from_directory` function without additional pixel-value scaling. Model-specific preprocessing was then applied within each model pipeline before the images were passed to the model.
 
 Data augmentation was applied only to the training dataset using TensorFlow's built-in image augmentation layers.
 
@@ -120,7 +119,7 @@ The augmentation operations were:
 
 The validation and testing datasets were not augmented.
 
-The datasets were loaded using the TensorFlow `tf.data` pipeline for batch processing during training.
+The resulting datasets were processed using TensorFlow's `tf.data` pipeline for efficient batch processing during training and evaluation.
 
 ## Models
 

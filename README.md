@@ -200,13 +200,7 @@ Each trained model was evaluated on:
 3. The Gaussian-blur dataset
 4. The rotated dataset
 
-Robustness was assessed by comparing accuracy on the original and transformed datasets.
-
-The accuracy drop was calculated as:
-
-`Accuracy Drop = Accuracy_Original - Accuracy_Perturbed`
-
-A smaller accuracy drop indicates lower sensitivity to the corresponding image perturbation.
+Robustness was assessed by comparing classification accuracy across the original and transformed test datasets.
 
 ## Error Analysis
 

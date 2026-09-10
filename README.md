@@ -102,8 +102,70 @@ The dataset can be obtained from its original [Kaggle source](https://www.kaggle
 - Image format: RGB
 - Image resolution: 224 × 224 pixels
 - Data split: Training / Validation / Test
-- Test set: 100 images (5 images per species)
 - Original dataset split: Maintained throughout the experiments
+
+The following 20 moth species were selected for the study:
+
+| Class Index | Species |
+|---:|---|
+| 0 | ARCIGERA FLOWER MOTH |
+| 1 | ATLAS MOTH |
+| 2 | BANDED TIGER MOTH |
+| 3 | BIRD CHERRY ERMINE MOTH |
+| 4 | CINNABAR MOTH |
+| 5 | CLEARWING MOTH |
+| 6 | COMET MOTH |
+| 7 | EMPEROR GUM MOTH |
+| 8 | GARDEN TIGER MOTH |
+| 9 | GIANT LEOPARD MOTH |
+| 10 | HERCULES MOTH |
+| 11 | HUMMING BIRD HAWK MOTH |
+| 12 | IO MOTH |
+| 13 | LUNA MOTH |
+| 14 | MADAGASCAN SUNSET MOTH |
+| 15 | OLEANDER HAWK MOTH |
+| 16 | POLYPHEMUS MOTH |
+| 17 | ROSY MAPLE MOTH |
+| 18 | SIXSPOT BURNET MOTH |
+| 19 | WHITE LINED SPHINX MOTH |
+
+### Dataset Split
+
+The selected dataset contains 2,767 images across the three predefined splits:
+
+| Split | Number of Images | Number of Classes |
+|---|---:|---:|
+| Training | 2,567 | 20 |
+| Validation | 100 | 20 |
+| Test | 100 | 20 |
+| **Total** | **2,767** | **20** |
+
+The predefined training, validation and test split was maintained throughout the main experiments.
+
+### Dataset Directory Structure
+
+After downloading the dataset, the selected moth images should be organised into the following directory structure:
+
+```text
+dataset/
+├── train/
+│   ├── ARCIGERA FLOWER MOTH/
+│   ├── ATLAS MOTH/
+│   ├── BANDED TIGER MOTH/
+│   ├── ...
+│   └── WHITE LINED SPHINX MOTH/
+│
+├── valid/
+│   ├── ARCIGERA FLOWER MOTH/
+│   ├── ...
+│   └── WHITE LINED SPHINX MOTH/
+│
+└── test/
+    ├── ARCIGERA FLOWER MOTH/
+    ├── ...
+    └── WHITE LINED SPHINX MOTH/
+```
+Only the 20 selected moth classes are required for the experiments. The original dataset is not included in this repository and must be obtained from the original Kaggle source.
 
 ## Data Preprocessing
 

@@ -1,6 +1,6 @@
 # Moth Species Classification
 
-This repository contains the code and supporting materials for an MSc Extended Research Project investigating deep learning approaches for automated moth species classification.
+This repository contains the code and supporting materials for the MSc Extended Research Project, *Automated Classification of Moth Species for Biodiversity Monitoring Using Deep Learning*.
 
 The project evaluates five models:
 
@@ -31,19 +31,24 @@ Moth-Species-Classification/
 │   ├── CrossModel_ErrorAnalysis.ipynb
 │   └── LowLight_GradCAM.ipynb
 │
-└── error_analysis/
-    ├── CNN_predictions.csv
-    ├── CNNAug_predictions.csv
-    ├── ResNet50_predictions.csv
-    ├── EfficientNetB0_predictions.csv
-    ├── ViT_predictions.csv
-    ├── CrossModel_ConfusionPairs.csv
-    └── Species_Error_Frequency.csv
+└── results/
+    ├── overall_classification_results.csv
+    ├── model_complexity_results.csv
+    ├── robustness_accuracy_results.csv
+    │
+    └── error_analysis/
+        ├── CNN_predictions.csv
+        ├── CNNAug_predictions.csv
+        ├── ResNet50_predictions.csv
+        ├── EfficientNetB0_predictions.csv
+        ├── ViT_predictions.csv
+        ├── CrossModel_ConfusionPairs.csv
+        └── Species_Error_Frequency.csv
 ```
 
 ## Environment and Installation
 
-The experiments were developed using Python 3.10 and TensorFlow 2.16.2. Keras Hub is required for the Vision Transformer implementation. Model training was conducted using Google Colab with an NVIDIA T4 GPU.
+The experiments were conducted using Python 3.10 and TensorFlow 2.16.2. Keras Hub is required for the Vision Transformer implementation. Model training was conducted using Google Colab with an NVIDIA T4 GPU.
 
 Install the required packages using:
 
@@ -65,7 +70,6 @@ The dataset can be obtained from the original [Kaggle source](https://www.kaggle
 - Image format: RGB
 - Image resolution: 224 × 224 pixels
 - Data split: Training / Validation / Test
-- Original dataset split: Maintained throughout the experiments
 
 The following 20 moth species were selected:
 
@@ -141,7 +145,7 @@ Data augmentation was applied only to the training data using TensorFlow augment
 - Rotation
 - Gaussian noise
 
-Validation and test datasets were not augmented. The resulting datasets were processed using TensorFlow's `tf.data` pipeline.
+Validation and test datasets were not augmented.
 
 ## Models
 
@@ -199,7 +203,7 @@ Each model was evaluated on the original and transformed test sets, and performa
 
 ## Error Analysis
 
-The `error_analysis/` directory contains prediction-level results, cross-model confusion pairs and species-level error frequencies used for the cross-model error analysis.
+The `results/error_analysis/` directory contains prediction-level results, cross-model confusion pairs and species-level error frequencies used for the cross-model error analysis.
 
 ## Grad-CAM Analysis
 
@@ -210,7 +214,7 @@ The Grad-CAM notebook requires a trained `EfficientNetB0.keras` model. This mode
 ## How to Reproduce
 
 1. Download the dataset from the original Kaggle source and prepare the 20 selected classes using the specified training, validation and test structure.
-2. Install the required packages using `requirements.txt`.
+2. Install the required packages using `pip install -r requirements.txt`.
 3. Update the dataset path in the relevant notebook where required.
 4. Run the notebook cells sequentially to reproduce the corresponding experiment or analysis.
 5. For Grad-CAM, run `EfficientNetB0.ipynb` first to generate the required `EfficientNetB0.keras` model.

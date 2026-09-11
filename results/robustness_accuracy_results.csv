@@ -1,0 +1,6 @@
+﻿Model,Original (%),Low-light (%),Gaussian Blur (%),Rotation (%)
+Baseline CNN,77.0,66.0,53.0,42.0
+CNN (Data Augmentation),88.0,70.0,70.0,82.0
+ResNet50,96.0,93.0,92.0,96.0
+EfficientNet-B0,97.0,98.0,92.0,97.0
+ViT,94.0,92.0,97.0,95.0

@@ -1,0 +1,6 @@
+﻿Model,Accuracy (%),Parameters (M)
+Baseline CNN,77.0,11.17
+CNN (Data Augmentation),88.0,11.17
+ResNet50,96.0,23.63
+EfficientNet-B0,97.0,4.08
+ViT,94.0,85.81

@@ -1,11 +1,10 @@
-# Local working files
-Error Analysis/
-
 # Dataset
 train/
 valid/
 test/
+test_blur/
 test_dark/
+test_rotate/
 
 # Trained models
 *.keras
@@ -13,7 +12,7 @@ test_dark/
 *.hdf5
 
 # Generated figures
-Figure/
+figures/
 
 # Python cache
 __pycache__/
